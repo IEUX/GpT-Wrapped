@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a;
+    color: white;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.upload-container {
+    max-width: 600px;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.upload-btn {
+    background: #1DB954;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 1rem;
+}
+
+.metric-card {
+    background: #2a2a2a;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 1rem;
+    width: 300px;
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: scale(1.05);
+}
+
+.big-number {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    color: #1DB954;
+}
+
+.energy {
+    border: 2px solid #1DB954;
+}
+

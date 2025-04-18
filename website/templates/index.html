@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT Wrapped</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Your ChatGPT Wrapped</h1>
+        <form method="POST" enctype="multipart/form-data" action="/analyze">
+            <label class="upload-btn">
+                <input type="file" name="file" accept=".json">
+                Upload your ChatGPT Export
+            </label>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="report-container">
+        <h1>Your ChatGPT Year in Review</h1>
+
+        <div class="metric-card">
+            <h3>Total Messages</h3>
+            <p class="big-number">{{ metrics.total_messages }}</p>
+        </div>
+
+        <div class="metric-card energy">
+            <h3>Energy Used</h3>
+            <p>{{ "%.1f"|format(metrics.total_energy_wh) }} Wh</p>
+            <small>Enough to charge your phone {{ "%.0f"|format(metrics.energy_equivalents.phone_charges) }} times!</small>
+        </div>
+
+        <div class="metric-card">
+            <h3>Longest Conversation</h3>
+            <p>{{ metrics.longest_convo.title }}</p>
+            <p>{{ metrics.longest_convo.length }} messages</p>
+        </div>
+
+        <!-- Add more metrics -->
+    </div>
+</body>
+</html>
+
