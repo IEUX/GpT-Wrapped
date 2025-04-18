@@ -11,6 +11,14 @@ app.secret_key = 'your_secret_key_here'
 ALLOWED_EXTENSIONS = {'json'}
 
 
+class metrics:
+    def __init__(self, total_messages, longest_convo, total_energy_wh, energy_equivalent):
+        self.total_messages = total_messages
+        self.longest_convo = longest_convo
+        self.total_energy_wh = total_energy_wh
+        self.energy_equivalent = energy_equivalent
+
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -52,8 +60,5 @@ def analyze():
 
 
 def process_data(data):
-    metrics = 1
-    metrics.total_messages = 10
-    metrics.longest_convo.length = 5
-    metrics.total_energy_wh = 40
-    return metrics
+    metric = metrics(1, 2, 3, 4)
+    return metric

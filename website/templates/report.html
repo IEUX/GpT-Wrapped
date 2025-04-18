@@ -16,7 +16,7 @@
         <div class="metric-card energy">
             <h3>Energy Used</h3>
             <p>{{ "%.1f"|format(metrics.total_energy_wh) }} Wh</p>
-            <small>Enough to charge your phone {{ "%.0f"|format(metrics.energy_equivalents.phone_charges) }} times!</small>
+            <small>Enough to charge your phone {{ "%.0f"|format(metrics.energy_equivalent) }} times!</small>
         </div>
 
         <div class="metric-card">
