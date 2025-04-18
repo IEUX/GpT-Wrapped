@@ -7,26 +7,38 @@
 <body>
     <div class="report-container">
         <h1>Your ChatGPT Year in Review</h1>
-
+        <h2>Some of your ChatGPT stats<h2>
         <div class="metric-card">
-            <h3>Total Messages</h3>
-            <p class="big-number">{{ metrics.total_messages }}</p>
-        </div>
-
-        <div class="metric-card energy">
-            <h3>Energy Used</h3>
-            <p>{{ "%.1f"|format(metrics.total_energy_wh) }} Wh</p>
-            <small>Enough to charge your phone {{ "%.0f"|format(metrics.energy_equivalent) }} times!</small>
+            <h3>You've had</h3>
+            <p class="big-number">{{ metrics.total_chat_count }}</p>
+            <h3>conversations</h3>
         </div>
 
         <div class="metric-card">
-            <h3>Longest Conversation</h3>
-            <p>{{ metrics.longest_convo.title }}</p>
-            <p>{{ metrics.longest_convo.length }} messages</p>
+            <h3>You made</h3>
+            <p class="big-number">{{ metrics.total_prompt_count }}</p>
+            <h3>prompts</h3>
         </div>
 
-        <!-- Add more metrics -->
+        <div class="metric-card">
+            <h3>You generated</h3>
+            <p class="big-number">{{ metrics.total_token_count }}</p>
+            <h3>tokens</h3>
+        </div>
+
+        <h2>Here are some equivalents for the amount of CO² produced by your yearly ChatGPT use<h2>
+        <script name="impact-co2" src="https://impactco2.fr/iframe.js" data-type="comparateur" data-search="?value={{ metrics.total_co2_emissions }}&comparisons=game-of-thrones,box,dorade&language=en&theme=night"></script>
     </div>
+    <footer>
+        <p>
+            <span>Source used for the token to co2 estimate calculations: </span>
+            <a href=https://drane-versailles.region-academique-idf.fr/spip.php?article1167&lang=fr>Region académique île de france</a>
+        </p>
+        <p>
+            <span>Source used for the conversion of number of characters to tokens: </span>
+            <a href=https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them>OpenAI</a>
+        </p>
+    </footer>
 </body>
 </html>
 

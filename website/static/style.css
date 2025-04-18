@@ -1,9 +1,25 @@
+html {
+  height: 100%;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background: #1a1a1a;
     color: white;
     min-height: 100vh;
     padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .upload-container {
@@ -21,6 +37,12 @@ body {
     margin: 1rem;
 }
 
+.steps-container {
+    max-width: 600px;
+    margin: 5rem auto;
+    text-align: center;
+}
+
 .metric-card {
     background: #2a2a2a;
     padding: 2rem;
@@ -30,6 +52,12 @@ body {
     display: inline-block;
     text-align: center;
     transition: transform 0.3s ease;
+}
+
+.footer {
+    max-width: 600px;
+    margin: 5rem auto;
+    text-align: center;
 }
 
 .metric-card:hover {
@@ -46,3 +74,26 @@ body {
     border: 2px solid #1DB954;
 }
 
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}

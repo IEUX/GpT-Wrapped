@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <h1>Your ChatGPT Wrapped</h1>
     <div class="upload-container">
-        <h1>Your ChatGPT Wrapped</h1>
         <form method="POST" enctype="multipart/form-data" action="/analyze">
             <label class="upload-btn">
                 <input type="file" name="file" accept=".json">
@@ -14,6 +14,17 @@
             </label>
             <button type="submit">Analyze</button>
         </form>
+    </div>
+    <div class="steps-container">
+            <h2>Here's how you can get your data from ChatGPT</h2>
+            <div>
+                <p>
+                    <span>Step 1 - Export your data from</span>
+                    <a href=https://chatgpt.com/#settings/DataControls>OpenAI</a>
+                </p>
+                <p>Step 2 - Unzip your data </p>
+                <p>Step 3 - Upload your "conversations.json" file using the above button</p>
+            </div>
     </div>
 </body>
 </html>
